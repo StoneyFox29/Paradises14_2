@@ -1,0 +1,412 @@
+{
+    "version": 1,
+    "license": null,
+    "copyright": null,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": ""
+        },
+        {
+            "name": "id"
+        },
+        {
+            "name": "assistant"
+        },
+        {
+            "name": "librarian"
+        },
+        {
+            "name": "chaplain"
+        },
+        {
+            "name": "janitor"
+        },
+        {
+            "name": "botanist"
+        },
+        {
+            "name": "bartender"
+        },
+        {
+            "name": "chef"
+        },
+        {
+            "name": "clown"
+        },
+        {
+            "name": "mime"
+        },
+        {
+            "name": "intern"
+        },
+        {
+            "name": "medical"
+        },
+        {
+            "name": "paramedic"
+        },
+        {
+            "name": "coroner"
+        },
+        {
+            "name": "virologist"
+        },
+        {
+            "name": "chemist"
+        },
+        {
+            "name": "psychiatrist"
+        },
+        {
+            "name": "student"
+        },
+        {
+            "name": "research"
+        },
+        {
+            "name": "geneticist"
+        },
+        {
+            "name": "roboticist"
+        },
+        {
+            "name": "xenobiologist"
+        },
+        {
+            "name": "cadet"
+        },
+        {
+            "name": "security"
+        },
+        {
+            "name": "detective"
+        },
+        {
+            "name": "warden"
+        },
+        {
+            "name": "pilot"
+        },
+        {
+            "name": "securitymedic"
+        },
+        {
+            "name": "magistrate"
+        },
+        {
+            "name": "internalaffairsagent"
+        },
+        {
+            "name": "cargo"
+        },
+        {
+            "name": "courier"
+        },
+        {
+            "name": "shaftminer"
+        },
+        {
+            "name": "explorer"
+        },
+        {
+            "name": "smith"
+        },
+        {
+            "name": "trainee"
+        },
+        {
+            "name": "engineering"
+        },
+        {
+            "name": "atmostech"
+        },
+        {
+            "name": "mechanic"
+        },
+        {
+            "name": "captain"
+        },
+        {
+            "name": "HoP"
+        },
+        {
+            "name": "HoS"
+        },
+        {
+            "name": "CMO"
+        },
+        {
+            "name": "RD"
+        },
+        {
+            "name": "CE"
+        },
+        {
+            "name": "quartermaster"
+        },
+        {
+            "name": "gold"
+        },
+        {
+            "name": "silver"
+        },
+        {
+            "name": "ntrep"
+        },
+        {
+            "name": "blueshield"
+        },
+        {
+            "name": "nctrainer"
+        },
+        {
+            "name": "prisoner"
+        },
+        {
+            "name": "prisonerone"
+        },
+        {
+            "name": "prisonertwo"
+        },
+        {
+            "name": "prisonerthree"
+        },
+        {
+            "name": "prisonerfour"
+        },
+        {
+            "name": "prisonerfive"
+        },
+        {
+            "name": "prisonersix"
+        },
+        {
+            "name": "prisonerseven"
+        },
+        {
+            "name": "ERT_empty"
+        },
+        {
+            "name": "ERT_leader"
+        },
+        {
+            "name": "ERT_security"
+        },
+        {
+            "name": "ERT_medical"
+        },
+        {
+            "name": "ERT_engineering"
+        },
+        {
+            "name": "ERT_paranormal"
+        },
+        {
+            "name": "ERT_janitorial"
+        },
+        {
+            "name": "clownsquad"
+        },
+        {
+            "name": "centcom"
+        },
+        {
+            "name": "deathsquad"
+        },
+        {
+            "name": "admin"
+        },
+        {
+            "name": "commander"
+        },
+        {
+            "name": "syndierd"
+        },
+        {
+            "name": "syndie"
+        },
+        {
+            "name": "syndiebotany"
+        },
+        {
+            "name": "syndiecargo"
+        },
+        {
+            "name": "syndieengineer"
+        },
+        {
+            "name": "syndiechef"
+        },
+        {
+            "name": "syndiemedical"
+        },
+        {
+            "name": "syndiernd"
+        },
+        {
+            "name": "rainbow"
+        },
+        {
+            "name": "tsf"
+        },
+        {
+            "name": "ussp"
+        },
+        {
+            "name": "data"
+        },
+        {
+            "name": "TDred"
+        },
+        {
+            "name": "TDgreen"
+        },
+        {
+            "name": "guest"
+        },
+        {
+            "name": "guest_invalid"
+        },
+        {
+            "name": "fingerprint0"
+        },
+        {
+            "name": "fingerprint1"
+        },
+        {
+            "name": "retro_engineering"
+        },
+        {
+            "name": "retro_security"
+        },
+        {
+            "name": "retro_medical"
+        },
+        {
+            "name": "retro_research"
+        },
+        {
+            "name": "retro_nanotrasen"
+        },
+        {
+            "name": "retro"
+        },
+        {
+            "name": "civilian"
+        },
+        {
+            "name": "tourist"
+        },
+        {
+            "name": "barber"
+        },
+        {
+            "name": "bath"
+        },
+        {
+            "name": "casino"
+        },
+        {
+            "name": "waiter"
+        },
+        {
+            "name": "acolyte"
+        },
+        {
+            "name": "wrestler"
+        },
+        {
+            "name": "painter"
+        },
+        {
+            "name": "musician"
+        },
+        {
+            "name": "actor"
+        },
+        {
+            "name": "administrator"
+        },
+        {
+            "name": "touristtsf"
+        },
+        {
+            "name": "touristussp"
+        },
+        {
+            "name": "migrant"
+        },
+        {
+            "name": "guard"
+        },
+        {
+            "name": "managerjanitor"
+        },
+        {
+            "name": "apprentice"
+        },
+        {
+            "name": "uncertain"
+        },
+        {
+            "name": "emag"
+        },
+        {
+            "name": "cmag"
+        },
+        {
+            "name": "adjutant"
+        },
+        {
+            "name": "butler"
+        },
+        {
+            "name": "maid"
+        },
+        {
+            "name": "representativetsf"
+        },
+        {
+            "name": "representativeussp"
+        },
+        {
+            "name": "dealer"
+        },
+        {
+            "name": "vipcorporateguest"
+        },
+        {
+            "name": "banker"
+        },
+        {
+            "name": "securityclown"
+        },
+        {
+            "name": "nct_chip"
+        },
+        {
+            "name": "nct_chip_active"
+        },
+        {
+            "name": "magic_key"
+        },
+        {
+            "name": "trade_card"
+        },
+        {
+            "name": "trade_card_holo",
+            "delays": [
+                [
+                    1,
+                    0.1,
+                    0.1,
+                    0.1
+                ]
+            ]
+        }
+    ]
+}
