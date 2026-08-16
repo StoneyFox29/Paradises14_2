@@ -1,15 +1,12 @@
 {
     "version": 1,
-    "license": null,
-    "copyright": null,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Taken from https://github.com/ss220club/Paradise-SS220/commit/71e9271a348d4dc2d39970c3140fe5c4fff0cb5d",
     "size": {
         "x": 32,
         "y": 32
     },
     "states": [
-        {
-            "name": ""
-        },
         {
             "name": "id"
         },
