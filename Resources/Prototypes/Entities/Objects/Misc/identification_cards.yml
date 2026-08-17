@@ -125,12 +125,12 @@
   id: QuartermasterIDCard
   name: quartermaster ID card
   components:
-  - type: Sprite
-    state: quartermaster
-  - type: Item
-    heldPrefix: silver
-  - type: PresetIdCard
-    job: Quartermaster
+    - type: Sprite
+      state: quartermaster
+    - type: Item
+      heldPrefix: silver
+    - type: PresetIdCard
+      job: Quartermaster
 
 #Engineering
 
@@ -159,10 +159,10 @@
   id: AtmosIDCard
   name: atmospheric technician ID card
   components:
-  - type: Sprite
-    stete: atmostech
-  - type: PresetIdCard
-    job: AtmosphericTechnician
+    - type: Sprite
+      stete: atmostech
+    - type: PresetIdCard
+      job: AtmosphericTechnician
 
 - type: entity
   parent: EngineeringIDCard
@@ -640,7 +640,7 @@
   name: syndicate operative ID card
   components:
     - type: Sprite
-      state: syndie
+      state: syndiestandard
     - type: AgentIDCard
     - type: IdCard
       jobIcon: JobIconSyndicateOperative
