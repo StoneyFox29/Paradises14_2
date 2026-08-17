@@ -221,6 +221,9 @@
             "name": "commander"
         },
         {
+            "name": "syndie"
+        },
+        {
             "name": "syndierd"
         },
         {
