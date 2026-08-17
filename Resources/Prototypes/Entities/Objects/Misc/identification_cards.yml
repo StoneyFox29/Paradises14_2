@@ -6,11 +6,11 @@
   abstract: true
   components:
     - type: Sprite
-      sprite: Objects/Misc/id_cards.rsi
+      sprite: Objects/Misc/_Paradise/card.rsi
     - type: Clothing
       slots:
         - idcard
-      sprite: Objects/Misc/id_cards.rsi
+      sprite: Objects/Misc/_Paradise/card.rsi
     - type: Item
       size: Small
       heldPrefix: default
@@ -34,11 +34,7 @@
   name: passenger ID card
   components:
     - type: Sprite
-      layers:
-        - state: default
-        - sprite: &icon-rsi Interface/Misc/job_icons.rsi
-          offset: &icon-offset -0.09375, 0.0625 #3 pixels left, 2 pixels up
-          state: Passenger
+      state: assistant
     - type: PresetIdCard
       job: Passenger
 
@@ -50,15 +46,7 @@
   name: captain ID card
   components:
     - type: Sprite
-      layers:
-        - state: gold
-        - state: stripe_top
-          color: "#1b67a5"
-        - state: stripe_bottom
-          color: "#0e4069"
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: Captain
+      state: captain
     - type: Item
       heldPrefix: gold
     - type: PresetIdCard
@@ -78,15 +66,7 @@
   name: head of personnel ID card
   components:
     - type: Sprite
-      layers:
-        - state: silver
-        - state: stripe_top
-          color: &color-service-top "#639137"
-        - state: stripe_bottom
-          color: &color-service-bottom "#446326"
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: HeadOfPersonnel
+      state: HoP
     - type: Item
       heldPrefix: silver
     - type: PresetIdCard
@@ -98,15 +78,7 @@
   name: chief engineer ID card
   components:
     - type: Sprite
-      layers:
-        - state: silver
-        - state: stripe_top
-          color: &color-engineering-top "#ffa62b"
-        - state: stripe_bottom
-          color: &color-engineering-bottom "#bc5b00"
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: ChiefEngineer
+      state: CE
     - type: Item
       heldPrefix: silver
     - type: PresetIdCard
@@ -118,15 +90,7 @@
   name: chief medical officer ID card
   components:
     - type: Sprite
-      layers:
-        - state: silver
-        - state: stripe_top
-          color: &color-medical-top "#68aed6"
-        - state: stripe_bottom
-          color: &color-medical-bottom "#325f7a"
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: ChiefMedicalOfficer
+      state: CMO
     - type: Item
       heldPrefix: silver
     - type: PresetIdCard
@@ -138,15 +102,7 @@
   name: research director ID card
   components:
     - type: Sprite
-      layers:
-        - state: silver
-        - state: stripe_top
-          color: &color-science-top "#a53aaa"
-        - state: stripe_bottom
-          color: &color-science-bottom "#652368"
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: ResearchDirector
+      state: RD
     - type: Item
       heldPrefix: silver
     - type: PresetIdCard
@@ -158,15 +114,7 @@
   name: head of security ID card
   components:
     - type: Sprite
-      layers:
-        - state: silver
-        - state: stripe_top
-          color: &color-security-top "#cb0000"
-        - state: stripe_bottom
-          color: &color-security-bottom "#830000"
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: HeadOfSecurity
+      state: HoS
     - type: Item
       heldPrefix: silver
     - type: PresetIdCard
@@ -177,20 +125,12 @@
   id: QuartermasterIDCard
   name: quartermaster ID card
   components:
-    - type: Sprite
-      layers:
-        - state: silver
-        - state: stripe_top
-          color: &color-supply-top "#b18644"
-        - state: stripe_bottom
-          color: &color-supply-bottom "#5b4523"
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: QuarterMaster
-    - type: Item
-      heldPrefix: silver
-    - type: PresetIdCard
-      job: Quartermaster
+  - type: Sprite
+    state: quartermaster
+  - type: Item
+    heldPrefix: silver
+  - type: PresetIdCard
+    job: Quartermaster
 
 #Engineering
 
@@ -200,15 +140,7 @@
   name: technical assistant ID card
   components:
     - type: Sprite
-      layers:
-        - state: default
-        - state: stripe_top
-          color: *color-engineering-top
-        - state: stripe_bottom
-          color: *color-engineering-bottom
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: TechnicalAssistant
+      state: trainee
     - type: PresetIdCard
       job: TechnicalAssistant
 
@@ -218,15 +150,7 @@
   name: engineer ID card
   components:
     - type: Sprite
-      layers:
-        - state: default
-        - state: stripe_top
-          color: *color-engineering-top
-        - state: stripe_bottom
-          color: *color-engineering-bottom
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: StationEngineer
+      state: engineering
     - type: PresetIdCard
       job: StationEngineer
 
@@ -235,18 +159,10 @@
   id: AtmosIDCard
   name: atmospheric technician ID card
   components:
-    - type: Sprite
-      layers:
-        - state: default
-        - state: stripe_top
-          color: *color-engineering-top
-        - state: stripe_bottom
-          color: *color-engineering-bottom
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: AtmosphericTechnician
-    - type: PresetIdCard
-      job: AtmosphericTechnician
+  - type: Sprite
+    stete: atmostech
+  - type: PresetIdCard
+    job: AtmosphericTechnician
 
 - type: entity
   parent: EngineeringIDCard
@@ -254,15 +170,7 @@
   name: senior engineer ID card
   components:
     - type: Sprite
-      layers:
-        - state: default
-        - state: stripe_top
-          color: *color-engineering-top
-        - state: stripe_bottom
-          color: *color-engineering-bottom
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: SeniorEngineer
+      state: engineering
 
 #Medical
 
@@ -272,15 +180,7 @@
   name: medical intern ID card
   components:
     - type: Sprite
-      layers:
-        - state: default
-        - state: stripe_top
-          color: *color-medical-top
-        - state: stripe_bottom
-          color: *color-medical-bottom
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: MedicalIntern
+      state: intern
     - type: PresetIdCard
       job: MedicalIntern
 
@@ -290,15 +190,7 @@
   name: medical ID card
   components:
     - type: Sprite
-      layers:
-        - state: default
-        - state: stripe_top
-          color: *color-medical-top
-        - state: stripe_bottom
-          color: *color-medical-bottom
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: MedicalDoctor
+      state: medical
     - type: PresetIdCard
       job: MedicalDoctor
 
@@ -308,15 +200,7 @@
   name: paramedic ID card
   components:
     - type: Sprite
-      layers:
-        - state: default
-        - state: stripe_top
-          color: *color-medical-top
-        - state: stripe_bottom
-          color: *color-medical-bottom
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: Paramedic
+      state: paramedic
     - type: PresetIdCard
       job: Paramedic
 
@@ -326,15 +210,7 @@
   name: chemist ID card
   components:
     - type: Sprite
-      layers:
-        - state: default
-        - state: stripe_top
-          color: *color-medical-top
-        - state: stripe_bottom
-          color: *color-medical-bottom
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: Chemist
+      state: chemist
     - type: PresetIdCard
       job: Chemist
 
@@ -344,15 +220,7 @@
   name: psychologist ID card
   components:
     - type: Sprite
-      layers:
-        - state: default
-        - state: stripe_top
-          color: *color-medical-top
-        - state: stripe_bottom
-          color: *color-medical-bottom
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: Psychologist
+      state: psychiatrist
     - type: PresetIdCard
       job: Psychologist
 
@@ -362,15 +230,7 @@
   name: senior physician ID card
   components:
     - type: Sprite
-      layers:
-        - state: default
-        - state: stripe_top
-          color: *color-medical-top
-        - state: stripe_bottom
-          color: *color-medical-bottom
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: SeniorPhysician
+      state: medical
 
 #Science
 
@@ -380,15 +240,7 @@
   name: research assistant ID card
   components:
     - type: Sprite
-      layers:
-        - state: default
-        - state: stripe_top
-          color: *color-science-top
-        - state: stripe_bottom
-          color: *color-science-bottom
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: ResearchAssistant
+      state: student
     - type: PresetIdCard
       job: ResearchAssistant
 
@@ -398,15 +250,7 @@
   name: research ID card
   components:
     - type: Sprite
-      layers:
-        - state: default
-        - state: stripe_top
-          color: *color-science-top
-        - state: stripe_bottom
-          color: *color-science-bottom
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: Scientist
+      state: research
     - type: PresetIdCard
       job: Scientist
 
@@ -416,15 +260,7 @@
   name: senior researcher ID card
   components:
     - type: Sprite
-      layers:
-        - state: default
-        - state: stripe_top
-          color: *color-science-top
-        - state: stripe_bottom
-          color: *color-science-bottom
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: SeniorResearcher
+      state: research
 
 #Security
 
@@ -434,15 +270,7 @@
   name: security cadet ID card
   components:
     - type: Sprite
-      layers:
-        - state: default
-        - state: stripe_top
-          color: *color-security-top
-        - state: stripe_bottom
-          color: *color-security-bottom
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: SecurityCadet
+      state: cadet
     - type: PresetIdCard
       job: SecurityCadet
 
@@ -452,15 +280,7 @@
   name: security ID card
   components:
     - type: Sprite
-      layers:
-        - state: default
-        - state: stripe_top
-          color: *color-security-top
-        - state: stripe_bottom
-          color: *color-security-bottom
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: SecurityOfficer
+      state: security
     - type: PresetIdCard
       job: SecurityOfficer
 
@@ -470,15 +290,7 @@
   name: warden ID card
   components:
     - type: Sprite
-      layers:
-        - state: default
-        - state: stripe_top
-          color: *color-security-top
-        - state: stripe_bottom
-          color: *color-security-bottom
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: Warden
+      state: warden
     - type: PresetIdCard
       job: Warden
 
@@ -488,15 +300,7 @@
   name: detective ID card
   components:
     - type: Sprite
-      layers:
-        - state: default
-        - state: stripe_top
-          color: *color-security-top
-        - state: stripe_bottom
-          color: *color-security-bottom
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: Detective
+      state: detective
     - type: PresetIdCard
       job: Detective
 
@@ -506,15 +310,7 @@
   name: brigmedic ID card
   components:
     - type: Sprite
-      layers:
-        - state: default
-        - state: stripe_top
-          color: *color-security-top
-        - state: stripe_bottom
-          color: *color-security-bottom
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: Brigmedic
+      state: securitymedic
 
 - type: entity
   parent: SecurityIDCard
@@ -522,15 +318,7 @@
   name: senior officer ID card
   components:
     - type: Sprite
-      layers:
-        - state: default
-        - state: stripe_top
-          color: *color-security-top
-        - state: stripe_bottom
-          color: *color-security-bottom
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: SeniorOfficer
+      state: security
 
 #Service
 
@@ -540,15 +328,7 @@
   name: service worker ID card
   components:
     - type: Sprite
-      layers:
-        - state: default
-        - state: stripe_top
-          color: *color-service-top
-        - state: stripe_bottom
-          color: *color-service-bottom
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: ServiceWorker
+      state: ServiceWorker #TODO: sprite
     - type: PresetIdCard
       job: ServiceWorker
 
@@ -558,12 +338,7 @@
   name: clown ID card
   components:
     - type: Sprite
-      layers:
-        - state: default
-        - state: stripe_clown
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: Clown
+      state: clown
     - type: PresetIdCard
       job: Clown
 
@@ -573,15 +348,7 @@
   name: mime ID card
   components:
     - type: Sprite
-      layers:
-        - state: default
-        - state: stripe_top
-          color: "#2d2d2d"
-        - state: stripe_bottom
-          color: "#1d1d1d"
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: Mime
+      state: mime
     - type: PresetIdCard
       job: Mime
 
@@ -591,15 +358,7 @@
   name: musician ID card
   components:
     - type: Sprite
-      layers:
-        - state: default
-        - state: stripe_top
-          color: "#6f56b8"
-        - state: stripe_bottom
-          color: "#524089"
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: Musician
+      state: musician
     - type: PresetIdCard
       job: Musician
 
@@ -609,15 +368,7 @@
   name: chaplain ID card
   components:
     - type: Sprite
-      layers:
-        - state: default
-        - state: stripe_top
-          color: *color-service-top
-        - state: stripe_bottom
-          color: *color-service-bottom
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: Chaplain
+      state: chaplain
     - type: PresetIdCard
       job: Chaplain
 
@@ -627,15 +378,7 @@
   name: janitor ID card
   components:
     - type: Sprite
-      layers:
-        - state: default
-        - state: stripe_top
-          color: *color-service-top
-        - state: stripe_bottom
-          color: *color-service-bottom
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: Janitor
+      state: janitor
     - type: PresetIdCard
       job: Janitor
 
@@ -645,15 +388,7 @@
   name: bartender ID card
   components:
     - type: Sprite
-      layers:
-        - state: default
-        - state: stripe_top
-          color: *color-service-top
-        - state: stripe_bottom
-          color: *color-service-bottom
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: Bartender
+      state: bartender
     - type: PresetIdCard
       job: Bartender
 
@@ -663,15 +398,7 @@
   name: pun pun ID card
   components:
     - type: Sprite
-      layers:
-        - state: default
-        - state: stripe_top
-          color: *color-service-top
-        - state: stripe_bottom
-          color: *color-service-bottom
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: Bartender
+      state: bartender
     - type: PresetIdCard
       job: Bartender
       name: Pun Pun
@@ -685,15 +412,7 @@
   name: chef ID card
   components:
     - type: Sprite
-      layers:
-        - state: default
-        - state: stripe_top
-          color: *color-service-top
-        - state: stripe_bottom
-          color: *color-service-bottom
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: Chef
+      state: chef
     - type: PresetIdCard
       job: Chef
 
@@ -703,15 +422,7 @@
   name: botanist ID card
   components:
     - type: Sprite
-      layers:
-        - state: default
-        - state: stripe_top
-          color: *color-service-top
-        - state: stripe_bottom
-          color: *color-service-bottom
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: Botanist
+      state: botanist
     - type: PresetIdCard
       job: Botanist
 
@@ -721,15 +432,7 @@
   name: librarian ID card
   components:
     - type: Sprite
-      layers:
-        - state: default
-        - state: stripe_top
-          color: *color-service-top
-        - state: stripe_bottom
-          color: *color-service-bottom
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: Librarian
+      state: librarian
     - type: PresetIdCard
       job: Librarian
 
@@ -739,15 +442,7 @@
   name: lawyer ID card
   components:
     - type: Sprite
-      layers:
-        - state: default
-        - state: stripe_top
-          color: *color-service-top
-        - state: stripe_bottom
-          color: *color-service-bottom
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: Lawyer
+      state: internalaffairsagent
     - type: PresetIdCard
       job: Lawyer
 
@@ -757,15 +452,7 @@
   name: reporter ID card
   components:
     - type: Sprite
-      layers:
-        - state: default
-        - state: stripe_top
-          color: *color-service-top
-        - state: stripe_bottom
-          color: *color-service-bottom
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: Reporter
+      state: librarian #TODO: sprite a separate reporter card
     - type: PresetIdCard
       job: Reporter
 
@@ -775,15 +462,7 @@
   name: boxer ID card
   components:
     - type: Sprite
-      layers:
-        - state: default
-        - state: stripe_top
-          color: *color-service-top
-        - state: stripe_bottom
-          color: *color-service-bottom
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: Boxer
+      state: Boxer #TODO: sprite
 
 - type: entity
   parent: IDCardStandard
@@ -791,15 +470,7 @@
   name: zookeeper ID card
   components:
     - type: Sprite
-      layers:
-        - state: default
-        - state: stripe_top
-          color: *color-service-top
-        - state: stripe_bottom
-          color: *color-service-bottom
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: Zookeeper
+      state: Zookeeper #TODO: sprite
 
 #Supply
 
@@ -809,15 +480,7 @@
   name: cargo ID card
   components:
     - type: Sprite
-      layers:
-        - state: default
-        - state: stripe_top
-          color: *color-supply-top
-        - state: stripe_bottom
-          color: *color-supply-bottom
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: CargoTechnician
+      state: cargo
     - type: PresetIdCard
       job: CargoTechnician
 
@@ -827,15 +490,7 @@
   name: senior courier ID card
   components:
     - type: Sprite
-      layers:
-        - state: default
-        - state: stripe_top
-          color: *color-supply-top
-        - state: stripe_bottom
-          color: *color-supply-bottom
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: SeniorCourier
+      state: courier #only senior job that get a separate ID sprite
 
 - type: entity
   parent: IDCardStandard
@@ -843,15 +498,7 @@
   name: salvage ID card
   components:
     - type: Sprite
-      layers:
-        - state: default
-        - state: stripe_top
-          color: *color-supply-top
-        - state: stripe_bottom
-          color: *color-supply-bottom
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: ShaftMiner
+      state: shaftminer
     - type: PresetIdCard
       job: SalvageSpecialist
 
@@ -864,11 +511,7 @@
   description: A generically printed ID card for scummy prisoners.
   components:
     - type: Sprite
-      layers:
-        - state: orange
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: Prisoner
+      state: prisoner
     - type: Item
       heldPrefix: orange
     - type: Access
@@ -901,15 +544,7 @@
   suffix: Unremoveable
   components:
     - type: Sprite
-      layers:
-        - state: default
-        - state: stripe_top
-          color: "#5dc574"
-        - state: stripe_bottom
-          color: "#3f9b53"
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: Cluwne
+      state: rainbow #might sprite something later
     - type: IdCard
       jobTitle: job-title-cluwne
       jobIcon: JobIconCluwne
@@ -921,11 +556,7 @@
   name: visitor ID card
   components:
     - type: Sprite
-      layers:
-        - state: default
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: Visitor
+      state: tourist
     - type: IdCard
       jobTitle: job-title-visitor
       jobIcon: JobIconVisitor
@@ -993,15 +624,7 @@
   name: syndicate ID card
   components:
     - type: Sprite
-      layers:
-        - state: black
-        - state: stripe_top
-          color: &color-syndicate-top "#e80c0c"
-        - state: stripe_bottom
-          color: &color-syndicate-bottom "#960606"
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: Syndicate
+      state: syndie #TODO: port the ? sydie from para
     - type: IdCard
       jobIcon: JobIconSyndicate
     - type: Item
@@ -1017,15 +640,7 @@
   name: syndicate operative ID card
   components:
     - type: Sprite
-      layers:
-        - state: black
-        - state: stripe_top
-          color: *color-syndicate-top
-        - state: stripe_bottom
-          color: *color-syndicate-bottom
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: SyndicateOperative
+      state: syndie
     - type: AgentIDCard
     - type: IdCard
       jobIcon: JobIconSyndicateOperative
@@ -1036,15 +651,7 @@
   name: syndicate corpsman ID card
   components:
     - type: Sprite
-      layers:
-        - state: black
-        - state: stripe_top
-          color: *color-syndicate-top
-        - state: stripe_bottom
-          color: *color-syndicate-bottom
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: SyndicateCorpsman
+      state: syndiemedical
     - type: IdCard
       jobIcon: JobIconSyndicateCorpsman
 
@@ -1054,15 +661,7 @@
   name: syndicate commander ID card
   components:
     - type: Sprite
-      layers:
-        - state: black
-        - state: stripe_top
-          color: *color-syndicate-top
-        - state: stripe_bottom
-          color: *color-syndicate-bottom
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: SyndicateCommander
+      state: commander
     - type: IdCard
       jobIcon: JobIconSyndicateCommander
 
@@ -1073,15 +672,7 @@
   suffix: Ninja
   components:
     - type: Sprite
-      layers:
-        - state: ninja
-        - state: stripe_top
-          color: "#38D848"
-        - state: stripe_bottom
-          color: "#309000"
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: Ninja
+      state: Ninja #TODO: sprite
     - type: Item
       heldPrefix: green
     - type: AgentIDCard
@@ -1097,11 +688,7 @@
   name: pirate ID card
   components:
     - type: Sprite
-      layers:
-        - state: pirate
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: Pirate
+      state: Pirate #TODO: sprite
     - type: Item
       heldPrefix: orange #this is close enough to the weird puce color pirate IDs have going on
     - type: IdCard
@@ -1113,8 +700,7 @@
   name: xenoborg ID card
   components:
     - type: Sprite
-      layers:
-        - state: default
+      state: xenoborg #TODO: sprite, why the hell does a brg need an ID
     - type: Access
       tags:
         - Xenoborg
@@ -1125,11 +711,7 @@
   name: wizard ID card
   components:
     - type: Sprite
-      layers:
-        - state: wizard
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: Wizard
+      state: Wizard #TODO: sprite, could go with the magical key
     - type: Item
       heldPrefix: green
     - type: Access
@@ -1148,15 +730,7 @@
   name: command officer ID card
   components:
     - type: Sprite
-      layers:
-        - state: centcom
-        - state: stripe_top
-          color: &color-centcomm-top "#134975"
-        - state: stripe_bottom
-          color: &color-centcomm-bottom "#0d304d"
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: Nanotrasen
+      state: centcom
     - type: Item
       heldPrefix: blue
     - type: PresetIdCard
@@ -1168,15 +742,7 @@
   name: ERT leader ID card
   components:
     - type: Sprite
-      layers:
-        - state: gold
-        - state: stripe_top
-          color: *color-centcomm-top
-        - state: stripe_bottom
-          color: *color-centcomm-bottom
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: ERTLeader
+      state: ERT_leader
     - type: Item
       heldPrefix: gold
     - type: PresetIdCard
@@ -1188,15 +754,7 @@
   name: ERT chaplain ID card
   components:
     - type: Sprite
-      layers:
-        - state: centcom
-        - state: stripe_top
-          color: *color-service-top
-        - state: stripe_bottom
-          color: *color-service-bottom
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: ERTChaplain
+      state: ERT_paranormal
     - type: Item
       heldPrefix: blue
     - type: PresetIdCard
@@ -1208,15 +766,7 @@
   name: ERT engineer ID card
   components:
     - type: Sprite
-      layers:
-        - state: centcom
-        - state: stripe_top
-          color: *color-engineering-top
-        - state: stripe_bottom
-          color: *color-engineering-bottom
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: ERTEngineer
+      state: ERT_engineering
     - type: Item
       heldPrefix: blue
     - type: PresetIdCard
@@ -1228,15 +778,7 @@
   name: ERT janitor ID card
   components:
     - type: Sprite
-      layers:
-        - state: centcom
-        - state: stripe_top
-          color: *color-service-top
-        - state: stripe_bottom
-          color: *color-service-bottom
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: ERTJanitor
+      state: ERT_janitorial
     - type: Item
       heldPrefix: blue
     - type: PresetIdCard
@@ -1248,15 +790,7 @@
   name: ERT medic ID card
   components:
     - type: Sprite
-      layers:
-        - state: centcom
-        - state: stripe_top
-          color: *color-medical-top
-        - state: stripe_bottom
-          color: *color-medical-bottom
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: ERTMedical
+      state: ERT_medical
     - type: Item
       heldPrefix: blue
     - type: PresetIdCard
@@ -1268,15 +802,7 @@
   name: ERT security ID card
   components:
     - type: Sprite
-      layers:
-        - state: centcom
-        - state: stripe_top
-          color: *color-security-top
-        - state: stripe_bottom
-          color: *color-security-bottom
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: ERTSecurity
+      state: ERT_security
     - type: Item
       heldPrefix: blue
     - type: PresetIdCard
@@ -1288,15 +814,7 @@
   name: death squad ID card
   components:
     - type: Sprite
-      layers:
-        - state: centcom
-        - state: stripe_top
-          color: *color-centcomm-top
-        - state: stripe_bottom
-          color: *color-centcomm-bottom
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: DeathSquad
+      state: deathsquad
     - type: PresetIdCard
       job: DeathSquad
 
@@ -1307,15 +825,7 @@
   suffix: CBURN
   components:
     - type: Sprite
-      layers:
-        - state: centcom
-        - state: stripe_top
-          color: *color-centcomm-top
-        - state: stripe_bottom
-          color: *color-centcomm-bottom
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: CBURN
+      state: CBURN #TODO: sprite
     - type: Item
       heldPrefix: blue
     - type: PresetIdCard
@@ -1329,14 +839,7 @@
   description: An ID card that gives you access beyond your wildest dreams.
   components:
     - type: Sprite
-      sprite: Objects/Misc/id_cards.rsi
-      layers:
-        - state: admin
-        - sprite: *icon-rsi
-          offset: *icon-offset
-          state: Admin
-    - type: Clothing
-      sprite: Objects/Misc/id_cards.rsi
+      state: admin
     - type: Item
       heldPrefix: green
     - type: IdCard
